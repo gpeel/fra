@@ -13,7 +13,20 @@
                     templateUrl: 'app/endpoints/edit/edit-endpoint.html',
                     controller: 'EditEndpointsCtrl as editEndpoints'
                 }
+            },
+            resolve: {
+                endpoint: function ( $stateParams, EndpointsService) {
+                    console.log('$stateParams.endpointid', $stateParams.id);
+                    var res = EndpointsService.res.get({endpointid: $stateParams.id});
+                    console.log('resource' ,res);
+                    console.log('promise',res.$promise);
+
+                    
+                    return res.$promise;
+                }
+
             }
         });
     });
-})();
+})
+();
