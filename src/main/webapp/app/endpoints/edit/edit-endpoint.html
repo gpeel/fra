@@ -5,7 +5,7 @@
                 <section class="col-md-5">
                     <label class="label">URI du endpoint REST</label>
                     <label class="input"> <!--TODO Appliquer la classe 'state-error' si le champ est invalide -->
-                        <input type="text" name="uri" placeholder="URI du endpoint REST" required/>
+                        <input type="text" name="uri" placeholder="URI du endpoint REST" required  ng-model="editEndpoint.endpoint.uri"/>
 
                         <div class="note note-error"><!-- TODO Afficher en cas d'erreur -->
                             <div>L'URI du endpoint REST est obligatoire.</div>
